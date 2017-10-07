@@ -27,7 +27,8 @@ module ToyRobot
 
       def get_instructions
         while command = $stdin.gets.chomp
-          if TERMINATING_COMMANDS.include?(command.downcase)
+          command = command.downcase
+          if TERMINATING_COMMANDS.include?(command)
             break
           elsif command != ""
             application.execute_command(command)
