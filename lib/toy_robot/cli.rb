@@ -4,9 +4,12 @@ require_relative 'application'
 module ToyRobot
   class CLI < Thor
 
+    TERMINATING_COMMANDS = %w(exit end)
+
     desc "Toy Robot", "place and move robot on the table based on user input"
 
     attr_accessor :application
+
     def init
       @application = Application.new
       print "---------------------------------------\n"
@@ -24,7 +27,11 @@ module ToyRobot
 
       def get_instructions
         while command = $stdin.gets.chomp
-          print "# #{command}\r\n"
+          if TERMINATING_COMMANDS.include?(command.downcase)
+            break
+          else
+            print "# #{command}\r\n"
+          end
         end
       end
 

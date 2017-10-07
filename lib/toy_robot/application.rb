@@ -7,6 +7,7 @@ module ToyRobot
       "3) LEFT\n"\
       "4) RIGHT\n"\
       "5) REPORT\n"\
+      "6) To end game please enter EXIT or END\n"\
     end
   end
 end
