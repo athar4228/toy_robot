@@ -1,5 +1,13 @@
+require_relative 'table'
+
 module ToyRobot
   class Application
+
+    attr_reader :table
+
+    def initialize
+      @table = Table.new
+    end
 
     def rules
       "1) PLACE X,Y,F eg: PLACE 0,0,NORTH\n"\
