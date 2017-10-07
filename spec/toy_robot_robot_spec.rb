@@ -12,4 +12,11 @@ RSpec.describe "ToyRobot:Robot" do
       expect(subject.table.instance_of? ToyRobot::Table).to eq(true)
     end
   end
+
+  describe 'execute statement' do
+    it 'should set command passed as parameter to execute method' do
+      subject.execute("move")
+      expect(subject.command).to eq('move')
+    end
+  end
 end
