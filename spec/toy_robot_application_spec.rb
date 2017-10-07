@@ -10,6 +10,10 @@ RSpec.describe "ToyRobot:Application" do
     it 'should return table instance' do
       expect(subject.table.instance_of? ToyRobot::Table).to eq(true)
     end
+
+    it 'should return robot instance' do
+      expect(subject.robot.instance_of? ToyRobot::Robot).to eq(true)
+    end
   end
 
   describe 'application rules' do

@@ -1,12 +1,14 @@
 require_relative 'table'
+require_relative 'robot'
 
 module ToyRobot
   class Application
 
-    attr_reader :table
+    attr_reader :table, :robot
 
     def initialize
       @table = Table.new
+      @robot = Robot.new(@table)
     end
 
     def rules
