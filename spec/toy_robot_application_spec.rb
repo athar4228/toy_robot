@@ -1,7 +1,6 @@
 require 'toy_robot/application'
 require 'toy_robot/table'
 
-
 RSpec.describe "ToyRobot:Application" do
 
   subject {ToyRobot::Application.new}
