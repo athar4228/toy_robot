@@ -29,9 +29,10 @@ module ToyRobot
         while command = $stdin.gets.chomp
           if TERMINATING_COMMANDS.include?(command.downcase)
             break
-          else
-            print "# #{command}\r\n"
+          elsif command != ""
+            application.execute_command(command)
           end
+          print "# "
         end
       end
 

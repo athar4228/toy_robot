@@ -6,5 +6,8 @@ module ToyRobot
     def initialize(table)
       @table = table
     end
+
+    def execute(command)
+    end
   end
 end

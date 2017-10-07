@@ -5,10 +5,16 @@ module ToyRobot
   class Application
 
     attr_reader :table, :robot
+    attr_accessor :command
 
     def initialize
       @table = Table.new
       @robot = Robot.new(@table)
+    end
+
+    def execute_command(command)
+      @command = command
+      @robot.execute(@command)
     end
 
     def rules
