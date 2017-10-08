@@ -27,7 +27,7 @@ module ToyRobot
 
       def get_instructions
         while command = $stdin.gets.chomp
-          command = command.downcase
+          command = command.downcase.strip
           if TERMINATING_COMMANDS.include?(command)
             break
           elsif command != ""
